@@ -625,11 +625,6 @@ automatically set the locale based on the current user::
         $middleware->add(new LocaleSelectorMiddleware(['en_US', 'fr_FR']));
     }
 
-    DispatcherFactory::add('LocaleSelector');
-
-    // Restrict the locales to only en_US, fr_FR
-    DispatcherFactory::add('LocaleSelector', ['locales' => ['en_US', 'fr_FR']]);
-
 The ``LocaleSelectorMiddleware`` will use the ``Accept-Language`` header to
 automatically set the user's preferred locale. You can use the locale list
 option to restrict which locales will automatically be used.
